@@ -1,0 +1,40 @@
+public class quizassiemnt {
+    public static void main(String[] args) {
+        prouduct lactobe = new prouduct(1, "Lactobe", 300, 0.2);
+        prouduct phone = new prouduct(2, "Phone", 500, 0.2);
+
+        // Display both products in a single line each
+      lactobe.display();
+      phone.display();
+    }
+}
+
+class prouduct {
+    private int id;
+    private String name;
+    private double price;
+    private double discount;
+
+    prouduct(int ids, String names, double prices, double discounts) {
+        id = ids;
+        name = names;
+        price = prices;
+        discount = discounts;
+    }
+
+    public double priceAfterDiscount() {
+        return price - (price * discount );
+    }
+
+    public double finalPrice() {
+        double discountedPrice = priceAfterDiscount();
+        return discountedPrice + (discountedPrice * 0.05);
+    }
+
+
+    public void display() {
+        System.out.println(id + " " + name + " Price: " + price+
+                "After Discount: " + priceAfterDiscount() +
+                "Final (with VAT): " + finalPrice());
+    }
+}
