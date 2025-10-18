@@ -4,37 +4,37 @@ import java.util.EmptyStackException;
 public class quiz_stack {
     public static void main(String[] args) {
         // Create a stack of integers
-        example_stack<Integer> numbers = new example_stack<>();
+        example_stack<Integer> value = new example_stack<>();
 
         // Push some elements
-        numbers.push_method(10);
-        numbers.push_method(20);
-        numbers.push_method(30);
+        value.push_method(10);
+        value.push_method(20);
+        value.push_method(30);
 
         // Display the stack
-        numbers.display();
+        value.display();
 
         // Peek at the top element
-        System.out.println("Top element (peek): " + numbers.peek());
+        System.out.println("Top element (peek): " + value.peek());
 
         // Pop an element
-        System.out.println("Popped element: " + numbers.pop_method());
+        System.out.println("Popped element: " + value.pop_method());
 
         // Display again after popping
-        numbers.display();
+        value.display();
 
         // Push another element
-        numbers.push_method(40);
-        numbers.push_method(50);
+        value.push_method(40);
+        value.push_method(50);
 
         // Display final stack
-        numbers.display();
+        value.display();
 
         // Show size
-        System.out.println("Current stack size: " + numbers.size());
+        System.out.println("Current stack size: " + value.size());
 
         // Check if empty
-        System.out.println("Is the stack empty? " + numbers.isEmpty());
+        System.out.println("Is the stack empty? " + value.isEmpty());
     }
 }
 
@@ -59,10 +59,10 @@ class example_stacks<T> {
     }
 
     // push method
-    public void push_method(T element) {
+    public void push_method(T element_value) {
         if (size() == stack_variable.length)
             Expand();
-        stack_variable[Hore] = element;
+        stack_variable[Hore] = element_value;
         Hore++;
     }
 
@@ -107,4 +107,3 @@ class example_stacks<T> {
         }
     }
 }
-
